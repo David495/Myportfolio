@@ -1,0 +1,360 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background: rgb(34, 31, 31);
+}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #181616;
+    width: 100%;
+    height: 5rem;
+    position: fixed;
+    z-index: 999;
+}
+
+.logo{
+    margin-right: auto;
+}
+
+.logoText{
+    color: #fff;
+    font-weight: 600;
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+nav ul li a:hover{
+    color: rgb(67, 56, 56);
+   transition: 500ms ease-in-out;
+}
+
+.logoText:hover{
+    color: rgb(67, 56, 56);
+   transition: 500ms ease-in-out;
+}
+
+nav ul{
+    display: flex;
+    gap: 2rem;
+}
+
+nav ul li{
+    list-style: none;
+}
+
+nav ul li a{
+    color: #fff;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+.typeEffect h1{
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #fff;
+    width: 0;
+    animation: typing 4s steps(18, end) forwards, blink 0.7s step-end infinite;
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+}
+
+@keyframes typing{
+    from{
+        width: 0;
+    }
+    to {width: 18ch;
+    }
+}
+
+@keyframes blink{
+    50% {border-color: transparent;}
+}
+
+.heroSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem;
+    animation: showUp 3s 1 ease-out forwards ;
+    transform: translateY(50px);
+    opacity: 0;
+    flex-direction: row;
+}
+
+@keyframes showUp {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+    
+}
+
+.heroSubtext{
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.hamMenu{
+    height: 50px;
+    width: 50px;
+    margin-left: auto;
+    position: relative;
+    display: none; /* Hide by default */
+}
+
+@media (max-width: 800px){
+    header{
+        width: 100%;
+        position: fixed;
+    }
+    .hamMenu{
+    display: block;
+    }
+    .offScreenMenu{
+        background-color: rgb(34, 37, 49);
+        height: 100vh;
+        width: 100%;
+        max-width: 450px;
+        position: fixed;
+        top: 0;
+        padding-top: 5rem;
+        right: -450px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 3rem;
+        transition: .3s ease;
+    }
+    .offScreenMenu ul{
+        display: grid;
+    }
+    .offScreenMenu.active{
+        right: 0;
+    }
+    .hamMenu span{
+        height: 5px;
+        width: 100%;
+        background-color: hsl(0, 0%, 100%);
+        border-radius: 25px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        transition: .3s ease;
+        cursor: pointer;
+    }
+    .hamMenu span:nth-child(1){
+        top: 25%;
+    }
+    .hamMenu span:nth-child(3){
+        top: 75%;
+    }
+    .hamMenu.active span:nth-child(1){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    .hamMenu.active span:nth-child(2){
+       opacity: 0;
+    }
+    .hamMenu.active span:nth-child(3){
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+    }
+    .heroSection{
+        display: flex;
+        flex-direction: column;
+        padding: 1rem;
+    }
+    .imgHeroSection{
+        order: 1;
+    }
+    .textHeroSection{
+        order: 2;
+    }    
+    .typeEffect h1{
+        font-size: 2rem;
+    }
+}
+
+.heroImage{
+    border-radius: 30px;
+}
+
+.aboutSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    height: 90vh;
+    width: 100%;
+    background-color: hsl(260, 60%, 60%);
+    margin-top: 2rem;
+    border-radius: 30px;
+}
+
+.aboutHeadDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    margin-bottom: 3rem;
+    margin-top: 2rem;
+}
+
+.aboutHeadDiv::after{
+    content: '';
+    height: 3px;
+    width: 0px;
+    background-color: #fff;
+    position: absolute;
+    bottom: 0;
+    border-radius: 3px;
+}
+
+.aboutHeadDiv:hover::after{
+    width: 110px;
+    transition: 400ms ease-in-out;
+}
+
+.aboutHeading{
+    text-align: center;
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #fff;
+}
+
+.aaa{
+    color: #fff;
+}
+
+.aboutImage{
+    border-radius: 40px;
+    height: 30rem;
+    margin-bottom: 5rem;
+}
+
+.aboutSubtext{
+    color: #fff;
+    font-size: 1rem;
+}
+
+ .aboutButtonDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.aboutSubSections{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.aboutBtn{
+    height: 2.5rem;
+    width: 8.5rem;
+    background-color: transparent;
+    border: 2px solid #ff4b2b;
+    color: #ff4b2b;
+    padding: 0.6rem 1.5rem;
+    border-radius: 6px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.aboutBtn:hover{
+   background-color: #ff4b2b;
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(255, 75, 43, 0.4);
+}
+
+.firstImage{
+    height: 10rem;
+    border-radius: 15px;
+    width: 15rem;
+}
+ 
+.servicesContent {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+}
+.servTitle{
+    font-size: 1.2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.servSubTitle{
+    color: #fff;
+}
+.seeMoreBtn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+}
+
+.ServBtn{
+    height: 2.5rem;
+    width: 8rem;
+    background-color: rgb(5, 5, 123);
+    color: #fff;
+    font-size: 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #ff4b2b;  /* Vibrant coral-red for contrast */
+    padding: 0.8rem 1.8rem;
+    transition: background 0.4s ease, transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(255, 75, 43, 0.2);
+}
+
+.ServBtn:hover{
+    background: linear-gradient(135deg, #ff416c, #ff4b2b);
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(255, 75, 43, 0.4);
+}
+
+footer{
+    height: 100px;
+    width: 100%;
+    background-color: #2e1a47;
+}
+
+.mediaLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.fB, .yt, .gitImage{
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.twitter{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+}
