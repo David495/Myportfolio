@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Contact</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact.css">
 </head>
 <body>
         <header>
@@ -25,5 +25,61 @@
             <span></span>
         </div>
     </header>
+    <div class="contactDiv">
+        <div class="innerSection">
+            <h1 class="contactTitle">Contact me</h1>
+            <div class="nameDiv">
+                <div class="firstNameDiv">
+            <label for="firstName" class="firstNameClass" >First Name <em>*</em></label> <br>
+            <input type="text" class="firstNameInput" maxlength="20" id="firstNameInputId" required><br>
+                </div>
+                <div class="lastNameDiv">
+                <label for="lastName" class="lastNameClass" >Last Name <em>*</em></label> <br>
+                <input type="text" class="lastNameInput" maxlength="20" id="lastNameInputId" required >
+                </div>
+            </div>
+                <div class="emailDiv">
+                    <label for="email" class="emailInput" >Email address</label> <br>
+                    <input type="email" name="" id="emailId" class="emailInputBox"  required >
+                </div>
+                <div class="messageSection">
+    <label for="message">Message:</label><br>
+        <textarea id="messageId" name="message" rows="6" cols="50" placeholder="Type your message here..." class="messageBox
+            " required ></textarea>
+                </div>
+                <div class="consentMessage">
+                    <input type="checkbox" name="" id="checkBoxId" required >
+                    <label for="checkbox" class="consentText" >I consent to being contacted by David 
+                        <em>*</em></label>
+                </div>
+                <div class="submitButton">
+                    <input type="submit" value="Submit" class="Submit" id="submitButton" required>
+                </div>
+        </div>
+    </div>
+    <footer>
+        <div class="mediaLinks">
+            <a href=""><img src="img/fb-removebg-preview.png" alt="" class="fB"></a>
+           <a href=""><img src="img/yt2log.png" alt="" class="yt"></a>
+            <a href=""><img src="img/twitterImage.png" alt="" class="twitter"></a>
+            <a href=""><img src="img/gitimg.png" alt="" class="gitImage"></a>
+        </div>
+        <div class="footerNavLinks" >
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="services.html">Services</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="copyDiv">
+            <p class="copyrightMessage">
+                Copyright &copy; 2025 Developed David
+            </p>
+        </div>
+      </footer>
+    <script src="contact.js" defer></script>
 </body>
 </html>

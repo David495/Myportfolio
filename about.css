@@ -93,6 +93,26 @@ nav ul li a{
     padding: 2rem;
 }
 
+.aboutSubSections, .letsSection{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+.inneerText, .letsSubtext{
+    height: auto;
+    width: 40rem;
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 15px;
+    padding: 1rem;
+    box-shadow: 5px 5px 5px 4px black;
+}
+
+.pinerText{
+    color: rgba(4, 34, 4, 0.932);
+}
+
 @media (max-width: 768px){
     header{
         width: 100%;
@@ -155,4 +175,58 @@ nav ul li a{
     .aboutSection{
         flex-direction: column;
     }
+}
+
+footer{
+    height: auto;
+    width: 100%;
+    background-color: #2e1a47;
+}
+
+.mediaLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+.fB, .yt, .gitImage{
+    height: 32px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.twitter{
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    /* border: 1px solid yellowgreen; */
+    cursor: pointer;
+    transition: 1s ease;
+}
+
+.twitter:hover, .fB:hover, .yt:hover, .gitImage:hover {
+    background-color: #ff4b2b;
+    filter: invert(100%);
+    transition: 500ms ease-in;
+}
+
+.footerNavLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.copyDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #090310f3;
+    height: 3rem;
+}
+
+.copyrightMessage{
+    color: #fff;
 }

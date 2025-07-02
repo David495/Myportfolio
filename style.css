@@ -333,7 +333,7 @@ nav ul li a{
 }
 
 footer{
-    height: 100px;
+    height: auto;
     width: 100%;
     background-color: #2e1a47;
 }
@@ -356,5 +356,32 @@ footer{
     height: 30px;
     width: 30px;
     border-radius: 50%;
+    /* border: 1px solid yellowgreen; */
     cursor: pointer;
+    transition: 1s ease;
+}
+
+.twitter:hover, .fB:hover, .yt:hover, .gitImage:hover {
+    background-color: #ff4b2b;
+    filter: invert(100%);
+    transition: 500ms ease-in;
+}
+
+.footerNavLinks{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.copyDiv{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #090310f3;
+    height: 3rem;
+}
+
+.copyrightMessage{
+    color: #fff;
 }
